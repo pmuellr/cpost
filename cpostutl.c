@@ -1249,22 +1249,46 @@ int Memicmp(
    }
 
 /*------------------------------------------------------------------
+ * copy a string
+ *------------------------------------------------------------------*/
+char *Strcopy(
+   char *str
+   )
+   {
+   char *result;
+   char *next;
+
+   next = result = malloc(1+strlen(str));
+
+   while (*str)
+      {
+      *next = *str;
+      str++;
+      next++;
+      }
+
+   return result;
+   }
+
+/*------------------------------------------------------------------
  * upper case a string
  *------------------------------------------------------------------*/
 char *Strupr(
    char *str
    )
    {
-   char *orig;
+   char *result;
+   char *next;
 
-   orig = str;
-   while (*str)
+   next = result = Strcopy(str);
+
+   while (*next)
       {
-      *str = (char) toupper(*str);
-      str++;
+      *next = (char) toupper(*next);
+      next++;
       }
 
-   return orig;
+   return result;
    }
 
 #if 0

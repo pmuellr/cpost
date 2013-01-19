@@ -469,7 +469,7 @@ static void GetOptions(
     * parse arguments
     *---------------------------------------------------------------*/
    parsearg(argc,argv,0,PROGRAM_ENVV,"-",
-            "? b@ c@ d@ h@ k@ i@ n@ o@ p@ r@ s@ t@ w@ x@ y@",
+            Strcopy("? b@ c@ d@ h@ k@ i@ n@ o@ p@ r@ s@ t@ w@ x@ y@"),
             &oHelp,&oBrack,&oCtype,&oDuplex,&oHtype,&oKeys,&oImbed,
             &oSpace,&oFile,&oBreak,&oRepHdr,&oSort,&oTabs,&oWrap,
             &oXlate,&oTemp);
@@ -499,7 +499,7 @@ static void GetOptions(
    if ((NULL == oSort  ) || ('\0' == *oSort  ))  oSort   = "tn";
    if ((NULL == oTabs  ) || ('\0' == *oTabs  ))  oTabs   = "4";
    if ((NULL == oWrap  ) || ('\0' == *oWrap  ))  oWrap   = "";
-   if ((NULL == oXlate ) || ('\0' == *oXlate ))  oXlate  = "0,0";
+   if ((NULL == oXlate ) || ('\0' == *oXlate ))  oXlate  = Strcopy("0,0");
    if ((NULL == oTemp  ) || ('\0' == *oTemp  ))  oTemp   = "";
 
    /*---------------------------------------------------------------
@@ -925,4 +925,4 @@ int main(
    AllDone = 1;
    return 0;
    }
-
+

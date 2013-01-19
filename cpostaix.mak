@@ -26,4 +26,3 @@ parsearg.o : parsearg.h
 list.o     : list.h
 hash.o     : hash.h
 tokfile.o  : tokfile.h
-

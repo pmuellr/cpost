@@ -1,0 +1,4 @@
+cpost
+*.o
+*.obj
+*.exe

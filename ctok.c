@@ -547,4 +547,3 @@ void CTokGet(
    token->ident = cti->ident;
    token->line  = cti->line;
    }
-

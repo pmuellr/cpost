@@ -110,5 +110,3 @@ void parsearg(
 /* If multiple switches are in the argv array, the last one         */
 /* in the argv array will be the one used to set the variable.      */
 /*------------------------------------------------------------------*/
-
-

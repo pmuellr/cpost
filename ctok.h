@@ -51,4 +51,3 @@ void CTokGet(
    void     *handle,
    Token    *token
    );
-
